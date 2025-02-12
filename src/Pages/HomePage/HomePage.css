@@ -1,0 +1,65 @@
+.custom-swiper .swiper-pagination {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Thay đổi màu mũi tên */
+.swiper-button-next,
+.swiper-button-prev {
+  font-size: 40px; /* Điều chỉnh kích thước mũi tên */
+  width: 60px; /* Điều chỉnh chiều rộng của nút */
+  height: 60px; /* Điều chỉnh chiều cao của nút */
+  background-color: rgba(255, 255, 255, 0.3); /* Màu nền bán trong suốt */
+  border-radius: 50%; /* Viền tròn cho nút */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+  margin-right: 30px;
+  color: white;
+}
+
+/* Thay đổi màu khi hover */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #555555; /* Màu xám đậm khi hover */
+  background-color: #b0b0b0; /* Màu nền xám đậm khi hover */
+}
+
+/* Tuỳ chỉnh các mũi tên để có vị trí phù hợp */
+.swiper-button-next,
+.swiper-button-prev {
+  z-index: 20;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: white; /* Màu chấm */
+  opacity: 1; /* Độ trong suốt */
+  margin: 0 8px; /* Khoảng cách giữa các chấm */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ed7d31; /* Màu chấm đang hoạt động */
+  opacity: 1;
+}
+
+.swiper-pagination {
+  bottom: 490px !important; /* Khoảng cách từ đáy slider */
+  left: auto !important; /* Căn dấu chấm sang bên trái */
+  transform: translateX(-50%) !important; /* Căn giữa dấu chấm */
+  transform: translateY(-50%) !important; /* Căn giữa dấu chấm */
+  top: auto !important; /* Loại bỏ căn chỉnh mặc định nếu có */
+  align-items: center;
+}
+
+.custom-button {
+  cursor: pointer;
+}
