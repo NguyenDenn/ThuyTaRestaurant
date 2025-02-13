@@ -29,7 +29,7 @@ export default function Navbar() {
     }
   ]
   return (
-    <div className='absolute top-0 left-0 w-full p-4 bg-opacity-75 z-20'>
+    <div className='px-3 py-2 '>
       <div className='flex items-center justify-between z-30 mx-20'>
         <div className='flex items-center gap-3'>
           <img src='logo.png' alt='' className='w-[120px] h-[110px]' />
@@ -50,7 +50,7 @@ export default function Navbar() {
           >
             <a onClick={(e) => e.preventDefault()} className='hover:bg-[orange]'>
               <Space>
-                Click me
+                Sảnh tiệc
                 <DownOutlined />
               </Space>
             </a>

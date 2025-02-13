@@ -4,6 +4,7 @@ import 'swiper/css/pagination'
 import { Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import './HomePage.css' // Import the custom CSS file
+import { Link } from 'react-router-dom'
 
 const HomePage: React.FC = () => {
   return (
@@ -56,9 +57,12 @@ const HomePage: React.FC = () => {
             </div>
           </div>
 
-          <button className='absolute top-1/2 left-1/2 transform -translate-x-1/2 translate-y-[200px] z-50 w-[391px] h-[72px] bg-white rounded-lg text-[#C75D15] font-medium text-xl hover:bg-[#c75d15] hover-[border-1px] cursor-pointer hover:text-white transition duration-300'>
+          <Link
+            to='/menu'
+            className='absolute top-1/2 left-1/2 transform -translate-x-1/2 translate-y-[200px] z-50 w-[391px] h-[72px] bg-white rounded-lg text-[#C75D15] font-medium text-xl hover:bg-[#c75d15] hover-[border-1px] cursor-pointer hover:text-white transition duration-300'
+          >
             Tìm hiểu ngay
-          </button>
+          </Link>
         </div>
       </SwiperSlide>
       <SwiperSlide className='flex items-center justify-center'>

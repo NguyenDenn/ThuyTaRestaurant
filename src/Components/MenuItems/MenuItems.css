@@ -1,0 +1,15 @@
+.slick-prev,
+.slick-next {
+  color: black !important; /* Màu của mũi tên */
+  z-index: 10; /* Đảm bảo mũi tên hiển thị trên ảnh */
+  font-weight: bold;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  color: black !important; /* Giữ màu đen khi hover */
+  font-weight: bold;
+}
+.custom-carousel {
+  padding-left: 150px;
+}

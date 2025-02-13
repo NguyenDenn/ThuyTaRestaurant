@@ -2,10 +2,7 @@ import { EnvironmentFilled } from '@ant-design/icons'
 
 export default function Footer() {
   return (
-    <div
-      className='relative max-w-[1920px] h-[434px] bg-cover bg-center'
-      style={{ backgroundImage: "url('/footer.png')" }}
-    >
+    <div className='bg-cover bg-center ' style={{ backgroundImage: "url('/footer.png')" }}>
       <div className='container'>
         <div className='flex items-center text-white py-20'>
           {/* left */}

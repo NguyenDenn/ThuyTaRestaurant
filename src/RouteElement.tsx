@@ -1,8 +1,8 @@
 import { useRoutes } from 'react-router-dom'
 import HomePage from './Pages/HomePage'
 import MainLayout from './Layout/MainLayout'
-import Menu from './Pages/Menu'
 import Admin from './Pages/Admin'
+import MenuItems from './Components/MenuItems'
 
 export default function RoutesElement() {
   const routeElement = useRoutes([
@@ -18,7 +18,7 @@ export default function RoutesElement() {
       path: '/menu',
       element: (
         <MainLayout>
-          <Menu />
+          <MenuItems />
         </MainLayout>
       )
     },
