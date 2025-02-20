@@ -1,4 +1,4 @@
-import MenuItems from '~/Components/MenuItems'
+import MenuItems from '~/Components/Dish'
 
 export default function Menu() {
   return (

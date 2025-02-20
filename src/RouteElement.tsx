@@ -2,7 +2,8 @@ import { useRoutes } from 'react-router-dom'
 import HomePage from './Pages/HomePage'
 import MainLayout from './Layout/MainLayout'
 import Admin from './Pages/Admin'
-import MenuItems from './Components/MenuItems'
+import UploadFood from './Components/UploadFood'
+import Dish from './Components/Dish/Dish'
 
 export default function RoutesElement() {
   const routeElement = useRoutes([
@@ -15,12 +16,16 @@ export default function RoutesElement() {
       )
     },
     {
-      path: '/menu',
+      path: '/dish',
       element: (
         <MainLayout>
-          <MenuItems />
+          <Dish />
         </MainLayout>
       )
+    },
+    {
+      path: '/upload',
+      element: <UploadFood />
     },
     {
       path: '/admin',

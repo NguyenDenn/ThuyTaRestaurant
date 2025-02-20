@@ -1,6 +1,14 @@
+import { FoodType } from '~/types/Food'
 import MenuFood from '../MenuFood'
 
-export default function Menu() {
+interface MenuProps {
+  foods: FoodType[]
+  selectedCategory: string
+  setSelectedCategory: (category: string) => void
+}
+export default function Menu({ foods, selectedCategory, setSelectedCategory }: MenuProps) {
+  const categories = Array.from(new Map(foods.map((food) => [food.danhmuc, food])).values())
+
   return (
     <div className='col-span-2 z-10'>
       <div className='w-[400px] h-[650px] flex-shrink-0 bg-[#FFFAEC] rounded-[32px] shadow-sm '>
@@ -33,7 +41,51 @@ export default function Menu() {
             </svg>
           </div>
           <MenuFood Food='Bò' image='beef.png' quantity={4} backgroundColor='#FCBB62' color='#FFF' colorFood='#FFF' />
-          <MenuFood
+          {categories.map((category) => (
+            <div
+              key={category.danhmuc}
+              className={`flex relative justify-between items-center gap-4 mt-2 py-1 px-3 cursor-pointer rounded-lg ${
+                selectedCategory === category.danhmuc ? 'bg-[#FCBB62]' : 'bg-gray-100'
+              }`}
+              onClick={() => setSelectedCategory(category.danhmuc)}
+            >
+              <img src={category.image} alt='' className='w-[90px] h-[90px] z-20' />
+              <div
+                className='w-[298px] h-[100px] rounded-lg absolute left-[60px]'
+                style={
+                  {
+                    // backgroundColor: `${backgroundColor}`
+                  }
+                }
+              >
+                <div className=''></div>
+                <div className='flex flex-col ml-14'>
+                  <p
+                    style={{
+                      fontFamily: 'MTD Valky Bold',
+                      fontSize: '30px',
+                      fontWeight: '700',
+                      color: 'black'
+                    }}
+                  >
+                    {category.ten}
+                  </p>
+                  <p
+                    className=''
+                    style={
+                      {
+                        // color: `${color}`
+                      }
+                    }
+                  >
+                    4 món
+                  </p>
+                </div>
+              </div>
+              <p className='text-xl font-bold'>{category.danhmuc}</p>
+            </div>
+          ))}
+          {/* <MenuFood
             Food='Dồi trường'
             image='doitruong.png'
             quantity={3}
@@ -57,7 +109,7 @@ export default function Menu() {
             color='black'
             quantity={1}
             colorFood='black'
-          />
+          /> */}
         </div>
       </div>
     </div>

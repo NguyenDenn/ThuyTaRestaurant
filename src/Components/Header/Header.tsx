@@ -1,4 +1,4 @@
-import MenuItems from '../MenuItems'
+import MenuItems from '../Dish'
 import Navbar from '../Navbar/Navbar'
 
 export default function Header() {
